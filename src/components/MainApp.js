@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-import {
-  Grid,
-  Menu,
-  Segment,
-  Header,
-  Icon,
-  Container,
-  Image,
-} from "semantic-ui-react";
-import BallonImage from "../images/side-image.png";
+import { Menu, Icon } from "semantic-ui-react";
+import Home from "./Home";
+import Resume from "./Resume";
+import Skills from "./Skills";
 
 export default class TabularMenuBarOnLeft extends Component {
   state = { activeItem: "home" };
@@ -40,7 +34,10 @@ export default class TabularMenuBarOnLeft extends Component {
             active={activeItem === "resume"}
             onClick={this.handleItemClick}
           >
-            <Icon name="file alternate outline" />
+            <Icon
+              name="file alternate outline"
+              style={{ animation: "spin linear infinite" }}
+            />
             Resume
           </Menu.Item>
           <Menu.Item
@@ -49,7 +46,7 @@ export default class TabularMenuBarOnLeft extends Component {
             onClick={this.handleItemClick}
           >
             <Icon name="space shuttle" />
-            Services
+            Skills
           </Menu.Item>
           <Menu.Item
             name="links"
@@ -70,35 +67,17 @@ export default class TabularMenuBarOnLeft extends Component {
         </Menu>
         {activeItem === "home" && (
           <>
-            <Segment
-              inverted
-              style={{
-                marginTop: "-20px",
-                background: "linear-gradient(#1B80BF, #049DD9)",
-                height: "300px",
-              }}
-            >
-              <Header as="h2" icon textAlign="center">
-                <Icon name="users" circular />
-                <Header.Content>
-                  Welcome to Gale Force Tech Solutions
-                </Header.Content>
-              </Header>
-              <Container fluid text>
-                <p>
-                  Gale Force was founded as a way of connecting and helping new
-                  software engineers better understand how to code. We are here
-                  to advance your knowledge not only of specific languages, but
-                  to help in the development of thinking and working like a
-                  programmer.
-                </p>
-              </Container>
-            </Segment>
-            <Grid>
-              <Grid.Column>
-                <Image src={BallonImage} />
-              </Grid.Column>
-            </Grid>
+            <Home />
+          </>
+        )}
+        {activeItem === "resume" && (
+          <>
+            <Resume />
+          </>
+        )}
+        {activeItem === "services" && (
+          <>
+            <Skills />
           </>
         )}
       </>

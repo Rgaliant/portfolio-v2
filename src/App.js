@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { lightTheme, darkTheme } from "./components/Themes";
-import TabularMenuBarOnLeft from "./components/TabularMenuBarOnLeft";
+import TabularMenuBarOnLeft from "./components/MainApp";
 import { Tab } from "semantic-ui-react";
 
 const BigText = styled.p`

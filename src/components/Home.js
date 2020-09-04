@@ -26,11 +26,11 @@ const Home = () => {
         <Grid columns={2}>
           <Grid.Row>
             <Grid.Column>
-              <Header as="h2" icon textAlign="center" inverted>
+              <Header as="h1" icon textAlign="center" inverted>
                 <Header.Content>Ryan Fleming-Gale</Header.Content>
               </Header>
               <Container fluid text>
-                <p>
+                <p style={{ fontSize: "1.5em" }}>
                   Thank you for taking the time to view my portfolio website.
                   This site was built using React and is intended to act as a
                   way to show off my love for programming. I am passionate about
@@ -47,7 +47,7 @@ const Home = () => {
             <Grid.Column>
               <Image
                 src={headshot}
-                size="medium"
+                size="large"
                 centered
                 style={{ border: "6px solid black" }}
               />
@@ -58,10 +58,12 @@ const Home = () => {
       <Grid columns={2} inverted>
         <Grid.Row>
           <Grid.Column style={{ paddingLeft: "50px" }}>
-            <Image src={BallonImage} size="medium" />
+            <Image src={BallonImage} size="large" />
           </Grid.Column>
           <Grid.Column>
-            <p style={{ color: "#fff", paddingRight: "10%" }}>
+            <p
+              style={{ color: "#fff", paddingRight: "10%", fontSize: "1.5em" }}
+            >
               Although I have been an active technologist all my life, and wrote
               HTML back when myspace was around, I didn't start programming
               until after getting a customer service job at Tesla Motors. At
@@ -71,7 +73,9 @@ const Home = () => {
               Javascript, this only furthered my interest in becoming a
               programmer.
             </p>
-            <p style={{ color: "#fff", paddingRight: "10%" }}>
+            <p
+              style={{ color: "#fff", paddingRight: "10%", fontSize: "1.5em" }}
+            >
               In January of 2019 I enrolled in a full-time coding bootcamp
               through the University of Utah continuing eduction program. This
               bootcamp was at Devpoint Labs in Salt Lake City, Utah and gave me
@@ -85,7 +89,9 @@ const Home = () => {
               level accounting tools, these tools are utilized by very large
               property management companies.
             </p>
-            <p style={{ color: "#fff", paddingRight: "10%" }}>
+            <p
+              style={{ color: "#fff", paddingRight: "10%", fontSize: "1.5em" }}
+            >
               If anyone is looking at this is interested in reaching out, please
               view my resume and find my email and github. Don't hesitate to
               reach out or connect with me on linkedin, I am always open to

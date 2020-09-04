@@ -9,11 +9,10 @@ const Linkedin = () => {
       style={{
         marginTop: "-20px",
         background: "linear-gradient(#1B80BF, #049DD9)",
-        height: "30%",
       }}
     >
       <a href="https://www.linkedin.com/in/ryan-wendell-gale/">
-        <Image centered src={linkedinImg} size="large" />
+        <Image centered src={linkedinImg} size="huge" />
       </a>
     </Segment>
   );

@@ -3,6 +3,7 @@ import { Menu, Icon } from "semantic-ui-react";
 import Home from "./Home";
 import Resume from "./Resume";
 import Skills from "./Skills";
+import Work from "./Work";
 
 export default class TabularMenuBarOnLeft extends Component {
   state = { activeItem: "home" };
@@ -49,8 +50,8 @@ export default class TabularMenuBarOnLeft extends Component {
             Skills
           </Menu.Item>
           <Menu.Item
-            name="links"
-            active={activeItem === "links"}
+            name="work"
+            active={activeItem === "work"}
             onClick={this.handleItemClick}
           >
             <Icon name="code branch" />
@@ -78,6 +79,11 @@ export default class TabularMenuBarOnLeft extends Component {
         {activeItem === "services" && (
           <>
             <Skills />
+          </>
+        )}
+        {activeItem === "work" && (
+          <>
+            <Work />
           </>
         )}
       </>

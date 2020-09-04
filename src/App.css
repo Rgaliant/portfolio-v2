@@ -5,7 +5,48 @@
 }
 
 .spin {
-  animation: spin 4s infinite linear;
+  animation: spin 18s infinite linear;
+}
+
+.zoom_left {
+  transition: transform 0.2s; /* Animation */
+  z-index: 1;
+  position: relative;
+}
+
+.zoom_left:hover {
+  position: relative;
+  left: 250px;
+  top: 50px;
+  transform: scale(3.2);
+  z-index: 1;
+}
+
+.zoom_middle {
+  transition: transform 0.2s; /* Animation */
+  z-index: 1;
+  position: relative;
+}
+
+.zoom_middle:hover {
+  position: relative;
+  top: 50px;
+  transform: scale(3.2);
+  z-index: 1;
+}
+
+.zoom_right {
+  transition: transform 0.2s; /* Animation */
+  z-index: 1;
+  position: relative;
+}
+
+.zoom_right:hover {
+  position: relative;
+  right: 250px;
+  top: 50px;
+  transform: scale(3.2);
+  z-index: 1;
 }
 
 @keyframes spin {

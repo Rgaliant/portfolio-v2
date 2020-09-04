@@ -4,6 +4,7 @@ import Home from "./Home";
 import Resume from "./Resume";
 import Skills from "./Skills";
 import Work from "./Work";
+import Linkedin from "./Linkedin";
 
 export default class TabularMenuBarOnLeft extends Component {
   state = { activeItem: "home" };
@@ -58,12 +59,12 @@ export default class TabularMenuBarOnLeft extends Component {
             Work
           </Menu.Item>
           <Menu.Item
-            name="subscribe"
-            active={activeItem === "subscribe"}
+            name="linkedin"
+            active={activeItem === "linkedin"}
             onClick={this.handleItemClick}
           >
             <Icon name="subscript" />
-            Subscribe
+            Linkedin
           </Menu.Item>
         </Menu>
         {activeItem === "home" && (
@@ -84,6 +85,11 @@ export default class TabularMenuBarOnLeft extends Component {
         {activeItem === "work" && (
           <>
             <Work />
+          </>
+        )}
+        {activeItem === "linkedin" && (
+          <>
+            <Linkedin />
           </>
         )}
       </>
